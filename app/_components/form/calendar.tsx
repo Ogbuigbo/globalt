@@ -44,6 +44,8 @@ function CalendarComponent({ title, setDate }: CalendarProps) {
     setOpen(false) // Close the popover when a date is selected
   }
 
+  const minDate = new Date(new Date().setHours(0, 0, 0, 0));
+
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger className="flex justify-between py-2 px-4 items-center border rounded-lg w-[200px]">
@@ -55,7 +57,7 @@ function CalendarComponent({ title, setDate }: CalendarProps) {
           mode="single"
           selected={localDate}
           onSelect={handleDateSelect}
-          disabled={(selectedDate) => selectedDate < new Date().setHours(0, 0, 0, 0)} // Disable past dates
+          disabled={(selectedDate) => selectedDate < minDate} // Disable past dates
           className="rounded-md border"
         />
       </PopoverContent>

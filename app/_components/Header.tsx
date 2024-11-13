@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import React, {useState, useEffect} from 'react'
 import Link from "next/link"
-import { NAV_LINKS } from "../utils/data"
 import Hamburger from "../../assets/Hamburger"
 import Close from "../../assets/Close"
 import { usePathname } from "next/navigation"
@@ -12,11 +11,20 @@ interface NavLink {
 	href: string;
 	label: string; // Add other properties as needed
   }
+
+  const NAV_LINKS = [
+    { href: '/', key: 'home', label: 'Home' },
+    { href: '/about', key: 'items', label: 'About Us' },
+    { href: '/travel', key: 'travel', label: 'Travel' },
+    { href: '/real-estate', key: 'real-estate', label: 'Real Estate' },
+    { href: '/english-learning', key: 'english-learning', label: 'English Learning' },
+    { href: '/contact', key: 'contact_us', label: 'Contact' },
+  ];
   
 
 function Header() {
     const [nav, setNav] = useState(false)
-    const [activeLink, setActiveLink] = useState<string>("/") // Set default active link to 'home'
+    const [activeLink, setActiveLink] = useState<string>("/") 
 	const router = usePathname()
 
     const handleLinkClick = (link: NavLink) => {

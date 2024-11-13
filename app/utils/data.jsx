@@ -1,11 +1,11 @@
-export const NAV_LINKS = [
-    { href: '/', key: 'home', label: 'Home' },
-    { href: '/about', key: 'items', label: 'About Us' },
-    { href: '/travel', key: 'travel', label: 'Travel' },
-    { href: '/real-estate', key: 'real-estate', label: 'Real Estate' },
-    { href: '/english-learning', key: 'english-learning', label: 'English Learning' },
-    { href: '/contact', key: 'contact_us', label: 'Contact' },
-  ];
+// export const NAV_LINKS = [
+//     { href: '/', key: 'home', label: 'Home' },
+//     { href: '/about', key: 'items', label: 'About Us' },
+//     { href: '/travel', key: 'travel', label: 'Travel' },
+//     { href: '/real-estate', key: 'real-estate', label: 'Real Estate' },
+//     { href: '/english-learning', key: 'english-learning', label: 'English Learning' },
+//     { href: '/contact', key: 'contact_us', label: 'Contact' },
+//   ];
 
   export const ITEMS = [
     {

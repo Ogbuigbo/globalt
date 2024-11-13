@@ -12,7 +12,7 @@ interface ImageScrollProps {
   titleClass?: string;      // Custom class for the title
   descriptionClass?: string; // Custom class for the description
   slideContainerClass?: string; // Custom class for the slide container
-  button: string;           // Button text
+  button?: string;           // Button text
   showButton?: boolean;     // Boolean to control button visibility
 }
 

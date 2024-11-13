@@ -8,6 +8,12 @@ import Hamburger from "../../assets/Hamburger"
 import Close from "../../assets/Close"
 import { usePathname } from "next/navigation"
 
+interface NavLink {
+	href: string;
+	label: string; // Add other properties as needed
+  }
+  
+
 function Header() {
     const [nav, setNav] = useState(false)
     const [activeLink, setActiveLink] = useState<string>("/") // Set default active link to 'home'
@@ -46,9 +52,9 @@ function Header() {
   return (
     <header className='w-full p-6 flex items-center justify-between'>
         <div className='flex items-center'>
-            <Image src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/84ec08e8-34e9-42c7-9445-d2806d156403/fac575ac-7a41-484f-b7ac-875042de11f8?org_if_sml=1&force_format=original' width={50} height={50} alt='logo' unoptimized  />
-
-            <ul className="gap-8 text-[14px] hidden lg:flex ml-6">
+            <Image src='https://tinypic.host/images/2024/11/13/Screenshot-2024-11-13-at-07.08.59.png' width={200} height={200} alt='logo'  />
+        </div>
+		<ul className="gap-8 text-[14px] hidden lg:flex ml-6">
 				{NAV_LINKS.map((link) => (
 					<Link
 						href={link.href}
@@ -64,8 +70,6 @@ function Header() {
 					</Link>
 				))}
 			</ul>
-
-        </div>
         <div className="hidden lg:flex">
                 <Link href="/contact" className="z-10">
                     <button className="z-10 inline-block  bg-[#23297f] md:px-6 md:py-3 px-4 py-2 font-medium sm:w-auto rounded-sm md:rounded-lg text-white text-[14px] md:text-[16px]">
